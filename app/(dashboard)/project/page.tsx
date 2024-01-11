@@ -1,7 +1,7 @@
 'use client';
 // Libraries
 import React, { useState } from 'react';
-import { DndContext } from '@dnd-kit/core';
+import { closestCenter, DndContext, useDndContext } from '@dnd-kit/core';
 import Droppable from '@/app/(dashboard)/project/commponents/Droppable';
 import Draggable from '@/app/(dashboard)/project/commponents/Draggable';
 
@@ -25,11 +25,22 @@ const ProjectPage: React.FC<Props> = props => {
     }
   }
 
+  // testing
+  const dndContext = useDndContext();
+  console.log(dndContext);
+
   return (
-    <div className={'flex w-full'}>
+    <div className={'flex w-full flex-row'}>
       <h2 className={'text-center'}>Project</h2>
-      <div>
-        <DndContext onDragEnd={handleDragEnd}>
+      <div className={'container mx-auto px-4 bg-sky-300'}>
+        <DndContext
+          // onDragStart={handleDragStart}
+          onDragEnd={handleDragEnd}
+          //onDragCancel={handleDragCancel}
+          //sensors={sensors}
+          collisionDetection={closestCenter}
+          //measuring={measuring}
+        >
           {!isDropped ? draggableMarkup : null}
           <Droppable>{isDropped ? draggableMarkup : 'Drop here'}</Droppable>
         </DndContext>

@@ -1,6 +1,7 @@
 // Libraries
 import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
+import { Card } from '@/components/ui/card';
 
 // Component
 
@@ -23,9 +24,12 @@ const Droppable: React.FC<Props> = (props) => {
 
 
   return (
-    <div ref={setNodeRef} style={style}>
-      {props.children}
-    </div>
+    <Card className={'h-2 w-32'}>
+      <div ref={setNodeRef} style={style}>
+        {props.children}
+      </div>
+    </Card>
+
   );
 };
 

@@ -1,6 +1,7 @@
 // Libraries
 import React from 'react';
 import { useDraggable } from '@dnd-kit/core';
+import { Card } from '@/components/ui/card';
 
 // Component
 
@@ -23,9 +24,9 @@ const Draggable: React.FC<Props> = (props) => {
 
 
   return (
-    <button ref={setNodeRef} style={style} {...listeners} {...attributes}>
+    <Card ref={setNodeRef} style={style} {...listeners} {...attributes}>
       {props.children}
-    </button>
+    </Card>
   );
 };
 
