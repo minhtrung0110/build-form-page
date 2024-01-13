@@ -2,7 +2,7 @@
 import React from 'react';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { FormElementInstance } from '@/components/FormElements';
+import { FormElementInstance } from '@/types/FormElements';
 import { CustomInstance } from '@/components/fields/TextField';
 
 // Component

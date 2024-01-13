@@ -1,6 +1,6 @@
 // Libraries
 import React from 'react';
-import { FormElement } from '@/components/FormElements';
+import { FormElement } from '@/types/FormElements';
 import { useDraggable } from '@dnd-kit/core';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';

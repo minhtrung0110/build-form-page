@@ -4,7 +4,7 @@ import React from 'react';
 import DesignerSidebar from '@/app/(dashboard)/builder/components/DesignerSidebar';
 import { DragEndEvent, useDndMonitor, useDroppable } from '@dnd-kit/core';
 import { cn } from '@/lib/utils';
-import { ElementsType, FormElements } from '@/components/FormElements';
+import { ElementsType, FormElements } from '@/types/FormElements';
 import { idGenerator } from '@/lib/idGenerator';
 import useDesigner from '@/hooks/useDesigner';
 import DesignerElementWrapper from '@/app/(dashboard)/builder/components/DesignerElementWrapper ';
@@ -37,7 +37,7 @@ const Designer: React.FC<Props> = props => {
         const type = active?.data?.current?.type;
         const newElement = FormElements[type as ElementsType].construct(idGenerator());
 
-        console.log('New element:', newElement);
+        //console.log('New element:', newElement);
         addElement(elements.length, newElement);
       }
     },
@@ -67,6 +67,7 @@ const Designer: React.FC<Props> = props => {
               <div className="h-[120px] rounded-md bg-primary/20"></div>
             </div>
           )}
+          {/* Render list elements in workspace*/}
           {elements.length > 0 && (
             <div className="flex flex-col text-background w-full gap-2 p-4">
               {elements.map(ele => (

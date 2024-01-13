@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
-import { FormElementInstance } from '../FormElements';
+import { FormElementInstance } from '../../types/FormElements';
 
 type DesignerContextType = {
   elements: FormElementInstance[];

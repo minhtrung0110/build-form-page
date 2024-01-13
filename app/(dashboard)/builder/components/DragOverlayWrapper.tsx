@@ -1,7 +1,7 @@
 // Libraries
 import React, { useState } from 'react';
 import { Active, DragCancelEvent, DragEndEvent, DragOverlay, DragStartEvent, useDndMonitor } from '@dnd-kit/core';
-import { ElementsType, FormElements } from '@/components/FormElements';
+import { ElementsType, FormElements } from '@/types/FormElements';
 import { SidebarBtnElementDragOverlay } from '@/app/(dashboard)/builder/components/SidebarBtnElement';
 import useDesigner from '@/hooks/useDesigner';
 
@@ -31,7 +31,7 @@ const DragOverlayWrapper: React.FC<Props> = (props) => {
       setDraggedItem(null);
     },
   });
-  console.log('DRAG ITEM:', draggedItem);
+  // console.log('DRAG ITEM:', draggedItem);
   if (!draggedItem) return null;
 
   let node = <div>No drag overlay</div>;
