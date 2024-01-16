@@ -1,15 +1,15 @@
 'use client';
 // Libraries
 // Libraries
-import React from 'react';
 import { z } from 'zod';
 // Component
 // Style
 // Types
 import { ElementsType, FormElement, FormElementInstance } from '@/types/FormElements';
 import { MdTextFields } from 'react-icons/md';
-import DesignerComponent from '@/components/field-elements/DesignerComponent';
-import PropertiesComponent from '@/components/field-elements/PropertiesComponent';
+import DesignerComponent from '@/components/fields/TextField/DesignerComponent';
+import PropertiesComponent from '@/components/fields/TextField/PropertiesComponent';
+import FormComponent from '@/components/fields/TextField/FormComponent';
 
 const type: ElementsType = 'TextField';
 
@@ -48,7 +48,7 @@ export const TextFieldFormElement: FormElement = {
     label: 'Text Field',
   },
   designerComponent: DesignerComponent,
-  formComponent: () => <div>Form Component</div>,
+  formComponent: FormComponent,
   propertiesComponent: PropertiesComponent,
 };
 

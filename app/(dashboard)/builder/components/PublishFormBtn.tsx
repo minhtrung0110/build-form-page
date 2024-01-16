@@ -14,6 +14,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { MdOutlinePublish } from 'react-icons/md';
 import { FaSpinner } from 'react-icons/fa6';
+import { PublishForm } from '@/actions/form';
+import { useRouter } from 'next/navigation';
+import { toast } from '@/components/ui/use-toast';
 
 // Component
 
@@ -27,7 +30,26 @@ interface Props {
 }
 
 const PublishFormBtn: React.FC<Props> = (props) => {
-  const [loading, setLoading] = useTransition();
+  const { id } = props;
+  const [loading, startTransition] = useTransition();
+  const router = useRouter();
+
+  async function publishForm() {
+    try {
+      await PublishForm(id);
+      toast({
+        title: 'Success',
+        description: 'Your form is now available to the public',
+      });
+      router.refresh();
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Something went wrong',
+      });
+    }
+  }
+
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
@@ -54,7 +76,7 @@ const PublishFormBtn: React.FC<Props> = (props) => {
             disabled={loading}
             onClick={(e) => {
               e.preventDefault();
-              // startTransition(publishForm);
+              startTransition(publishForm);
             }}
           >
             Proceed {loading && <FaSpinner className='animate-spin' />}

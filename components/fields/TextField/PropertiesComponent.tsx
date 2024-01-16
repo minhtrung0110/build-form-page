@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { FormElementInstance } from '@/types/FormElements';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { CustomInstance, propertiesSchema } from '@/components/fields/TextField';
+import { CustomInstance, propertiesSchema } from '@/components/fields/TextField/TextField';
 import { zodResolver } from '@hookform/resolvers/zod';
 import useDesigner from '@/hooks/useDesigner';
 import {
