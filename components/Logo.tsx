@@ -18,8 +18,9 @@ interface Props {
 const Logo: React.FC<Props> = props => {
   const { title } = props;
   const pathname = usePathname();
+  
   const getNamePage = (path: String) => {
-    return NAME_PAGES.find(item => item.url === pathname)?.name || NAME_PAGE_DEFAULT;
+    return NAME_PAGES.find(item => pathname.includes(item.url))?.name || NAME_PAGE_DEFAULT;
   };
   return (
     <Link
