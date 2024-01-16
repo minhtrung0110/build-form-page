@@ -1,4 +1,4 @@
-import { TextFieldFormElement } from '../components/fields/TextField';
+import { TextFieldFormElement } from '../components/fields/TextField/TextField';
 import React from 'react';
 
 export type ElementsType = 'TextField';
