@@ -16,6 +16,7 @@ import Link from 'next/link';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { toast } from '@/components/ui/use-toast';
 import { Input } from '@/components/ui/input';
+import Confetti from 'react-confetti';
 
 // Component
 
