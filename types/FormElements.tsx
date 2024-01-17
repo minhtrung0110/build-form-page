@@ -1,6 +1,6 @@
 import { TextFieldFormElement } from '../components/fields/TextField/TextField';
 import React from 'react';
-import CheckboxFieldFormElement from '@/components/fields/CheckboxField';
+import { CheckboxFieldFormElement } from '@/components/fields/CheckboxField';
 
 export type ElementsType =
   | 'TextField'
