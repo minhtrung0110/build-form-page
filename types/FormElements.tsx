@@ -1,17 +1,19 @@
 import { TextFieldFormElement } from '../components/fields/TextField/TextField';
 import React from 'react';
+import CheckboxFieldFormElement from '@/components/fields/CheckboxField';
 
-export type ElementsType = 'TextField';
-// | 'TitleField'
-// | 'SubTitleField'
-// | 'ParagraphField'
-// | 'SeparatorField'
-// | 'SpacerField'
-// | 'NumberField'
-// | 'TextAreaField'
-// | 'DateField'
-// | 'SelectField'
-// | 'CheckboxField';
+export type ElementsType =
+  | 'TextField'
+  | 'TitleField'
+  | 'SubTitleField'
+  | 'ParagraphField'
+  | 'SeparatorField'
+  | 'SpacerField'
+  | 'NumberField'
+  | 'TextAreaField'
+  | 'DateField'
+  | 'SelectField'
+  | 'CheckboxField';
 
 export type SubmitFunction = (key: string, value: string) => void;
 
@@ -61,5 +63,5 @@ export const FormElements: FormElementsType = {
   // TextAreaField: TextAreaFormElement,
   // DateField: DateFieldFormElement,
   // SelectField: SelectFieldFormElement,
-  // CheckboxField: CheckboxFieldFormElement,
+  CheckboxField: CheckboxFieldFormElement,
 };
