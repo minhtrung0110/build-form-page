@@ -26,12 +26,14 @@ const SaveFormBtn: React.FC<Props> = (props) => {
   const updateFormContent = async () => {
     try {
       const jsonElement = JSON.stringify(elements);
-      await UpdateFormContent(id, jsonElement);
+      const res = await UpdateFormContent(id, jsonElement);
+      console.log('Response:', res);
       toast({
         title: 'Success',
         description: 'Update Form Content Success',
       });
     } catch (err) {
+      console.log('Error updating: ', err);
       toast({
         title: 'Error',
         description: 'Cannot update form content',
