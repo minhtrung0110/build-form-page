@@ -24,7 +24,7 @@ const FormComponent: React.FC<Props> = (props) => {
   const { elementInstance, isInvalid, submitValue, defaultValue } = props;
   const element = elementInstance as CustomInstanceCheckboxField;
 
-  const [value, setValue] = useState<boolean>(defaultValue === 'true' ? true : false);
+  const [value, setValue] = useState<boolean>(defaultValue === 'true');
   const [error, setError] = useState(false);
 
   useEffect(() => {

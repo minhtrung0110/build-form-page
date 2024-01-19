@@ -54,14 +54,14 @@ type FormElementsType = {
 };
 export const FormElements: FormElementsType = {
   TextField: TextFieldFormElement,
-  // TitleField: TitleFieldFormElement,
-  // SubTitleField: SubTitleFieldFormElement,
-  // ParagraphField: ParagprahFieldFormElement,
-  // SeparatorField: SeparatorFieldFormElement,
-  // SpacerField: SpacerFieldFormElement,
-  // NumberField: NumberFieldFormElement,
-  // TextAreaField: TextAreaFormElement,
-  // DateField: DateFieldFormElement,
-  // SelectField: SelectFieldFormElement,
+  TitleField: TitleFieldFormElement,
+  SubTitleField: SubTitleFieldFormElement,
+  ParagraphField: ParagprahFieldFormElement,
+  SeparatorField: SeparatorFieldFormElement,
+  SpacerField: SpacerFieldFormElement,
+  NumberField: NumberFieldFormElement,
+  TextAreaField: TextAreaFormElement,
+  DateField: DateFieldFormElement,
+  SelectField: SelectFieldFormElement,
   CheckboxField: CheckboxFieldFormElement,
 };
