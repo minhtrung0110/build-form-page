@@ -1,6 +1,7 @@
 import { TextFieldFormElement } from '../components/fields/TextField/TextField';
 import React from 'react';
 import { CheckboxFieldFormElement } from '@/components/fields/CheckboxField';
+import { TitleFieldFormElement } from '@/components/fields/TitleFieldFormElement/TitleFieldFormElement';
 
 export type ElementsType =
   | 'TextField'
@@ -55,13 +56,13 @@ type FormElementsType = {
 export const FormElements: FormElementsType = {
   TextField: TextFieldFormElement,
   TitleField: TitleFieldFormElement,
-  SubTitleField: SubTitleFieldFormElement,
-  ParagraphField: ParagprahFieldFormElement,
-  SeparatorField: SeparatorFieldFormElement,
-  SpacerField: SpacerFieldFormElement,
-  NumberField: NumberFieldFormElement,
-  TextAreaField: TextAreaFormElement,
-  DateField: DateFieldFormElement,
-  SelectField: SelectFieldFormElement,
+  // SubTitleField: SubTitleFieldFormElement,
+  // ParagraphField: ParagprahFieldFormElement,
+  // SeparatorField: SeparatorFieldFormElement,
+  // SpacerField: SpacerFieldFormElement,
+  // NumberField: NumberFieldFormElement,
+  // TextAreaField: TextAreaFormElement,
+  // DateField: DateFieldFormElement,
+  // SelectField: SelectFieldFormElement,
   CheckboxField: CheckboxFieldFormElement,
 };
