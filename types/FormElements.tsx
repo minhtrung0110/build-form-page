@@ -2,6 +2,7 @@ import { TextFieldFormElement } from '../components/fields/TextField/TextField';
 import React from 'react';
 import { CheckboxFieldFormElement } from '@/components/fields/CheckboxField';
 import { TitleFieldFormElement } from '@/components/fields/TitleFieldFormElement/TitleFieldFormElement';
+import { SubTitleFieldElement } from '@/components/fields/SubTitleFieldFormElement/SubTitleField';
 
 export type ElementsType =
   | 'TextField'
@@ -56,7 +57,7 @@ type FormElementsType = {
 export const FormElements: FormElementsType = {
   TextField: TextFieldFormElement,
   TitleField: TitleFieldFormElement,
-  // SubTitleField: SubTitleFieldFormElement,
+  SubTitleField: SubTitleFieldElement,
   // ParagraphField: ParagprahFieldFormElement,
   // SeparatorField: SeparatorFieldFormElement,
   // SpacerField: SpacerFieldFormElement,

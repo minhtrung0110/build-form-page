@@ -20,7 +20,7 @@ const FormTitleField: React.FC<Props> = (props) => {
 
 
   const { title } = element.extraAttributes;
-  return <p className='text-xl'>{title}</p>;
+  return <p className='text-xl font-bold'>{title}</p>;
 };
 
 export default FormTitleField;
