@@ -6,8 +6,8 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import useDesigner from '@/hooks/useDesigner';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { propertiesSchema, SubTitleCustomInstance } from '@/components/fields/SubTitleFieldFormElement/SubTitleField';
+import { ParagraphFieldInstance, propertiesSchema } from '@/components/fields/ParagraphField/ParagraphField';
+import { Textarea } from '@/components/ui/textarea';
 
 // Component
 
@@ -21,26 +21,28 @@ interface Props {
 }
 
 type propertiesFormSchemaType = z.infer<typeof propertiesSchema>
-const PropertiesSubTitleField: React.FC<Props> = (props) => {
+const PropertiesParagraphField: React.FC<Props> = (props) => {
   const { elementInstance } = props;
+  const element = elementInstance as ParagraphFieldInstance;
   const { updateElement } = useDesigner();
-  const element = elementInstance as SubTitleCustomInstance;
   const form = useForm<propertiesFormSchemaType>({
     resolver: zodResolver(propertiesSchema),
     mode: 'onBlur',
     defaultValues: {
-      title: element.extraAttributes.title,
+      text: element.extraAttributes.text,
     },
   });
+
   useEffect(() => {
     form.reset(element.extraAttributes);
   }, [element, form]);
 
   function applyChanges(values: propertiesFormSchemaType) {
-    const { title } = values;
+    const { text } = values;
     updateElement(element.id, {
-      ...element, extraAttributes: {
-        title,
+      ...element,
+      extraAttributes: {
+        text,
       },
     });
   }
@@ -56,12 +58,13 @@ const PropertiesSubTitleField: React.FC<Props> = (props) => {
       >
         <FormField
           control={form.control}
-          name='title'
+          name='text'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Title</FormLabel>
+              <FormLabel>Text</FormLabel>
               <FormControl>
-                <Input
+                <Textarea
+                  rows={5}
                   {...field}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') e.currentTarget.blur();
@@ -72,10 +75,9 @@ const PropertiesSubTitleField: React.FC<Props> = (props) => {
             </FormItem>
           )}
         />
-
       </form>
     </Form>
   );
 };
 
-export default PropertiesSubTitleField;
+export default PropertiesParagraphField;

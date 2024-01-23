@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import useDesigner from '@/hooks/useDesigner';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { CustomInstance, propertiesSchema } from '@/components/fields/TitleFieldFormElement/TitleFieldFormElement';
+import { propertiesSchema, SubTitleCustomInstance } from '@/components/fields/SubTitleField/SubTitleField';
 
 // Component
 
@@ -21,10 +21,10 @@ interface Props {
 }
 
 type propertiesFormSchemaType = z.infer<typeof propertiesSchema>
-const PropertiesTitleField: React.FC<Props> = (props) => {
+const PropertiesSubTitleField: React.FC<Props> = (props) => {
   const { elementInstance } = props;
   const { updateElement } = useDesigner();
-  const element = elementInstance as CustomInstance;
+  const element = elementInstance as SubTitleCustomInstance;
   const form = useForm<propertiesFormSchemaType>({
     resolver: zodResolver(propertiesSchema),
     mode: 'onBlur',
@@ -78,4 +78,5 @@ const PropertiesTitleField: React.FC<Props> = (props) => {
   );
 };
 
-export default PropertiesTitleField;
+export default PropertiesSubTitleField;
+

@@ -1,7 +1,7 @@
 // Libraries
 import React from 'react';
 import { FormElementInstance } from '@/types/FormElements';
-import { SubTitleCustomInstance } from '@/components/fields/SubTitleFieldFormElement/SubTitleField';
+import { SubTitleCustomInstance } from '@/components/fields/SubTitleField/SubTitleField';
 
 // Component
 

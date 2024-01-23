@@ -6,9 +6,9 @@ import { z } from 'zod';
 // Style
 // Types
 import { ElementsType, FormElement, FormElementInstance } from '@/types/FormElements';
-import DesignerTitleField from '@/components/fields/TitleFieldFormElement/DesignerTitleField';
-import FormTitleField from '@/components/fields/TitleFieldFormElement/FormTitleField';
-import PropertiesTitleField from '@/components/fields/TitleFieldFormElement/PropertiesTitleField';
+import DesignerTitleField from '@/components/fields/TitleField/DesignerTitleField';
+import FormTitleField from '@/components/fields/TitleField/FormTitleField';
+import PropertiesTitleField from '@/components/fields/TitleField/PropertiesTitleField';
 import { LuHeading1 } from 'react-icons/lu';
 
 const type: ElementsType = 'TitleField';

@@ -8,9 +8,9 @@ import { z } from 'zod';
 import { ElementsType, FormElement, FormElementInstance } from '@/types/FormElements';
 
 import { LuHeading2 } from 'react-icons/lu';
-import DesignerSubTitleField from '@/components/fields/SubTitleFieldFormElement/DesignerSubTitleField';
-import FormSubTitleField from '@/components/fields/SubTitleFieldFormElement/FormSubTitleField';
-import PropertiesSubTitleField from '@/components/fields/SubTitleFieldFormElement/PropertiesSubTitleField';
+import DesignerSubTitleField from '@/components/fields/SubTitleField/DesignerSubTitleField';
+import FormSubTitleField from '@/components/fields/SubTitleField/FormSubTitleField';
+import PropertiesSubTitleField from '@/components/fields/SubTitleField/PropertiesSubTitleField';
 
 const type: ElementsType = 'SubTitleField';
 
