@@ -4,6 +4,8 @@ import { CheckboxFieldFormElement } from '@/components/fields/CheckboxField';
 import { TitleFieldFormElement } from '@/components/fields/TitleField/TitleFieldFormElement';
 import { SubTitleFieldElement } from '@/components/fields/SubTitleField/SubTitleField';
 import { ParagraphFieldFormElement } from '@/components/fields/ParagraphField/ParagraphField';
+import { SeparatorFieldFormElement } from '@/components/fields/SeparatorField/SeparatorField';
+import { SpacerFieldFormElement } from '@/components/fields/SpacerField/SpacerField';
 
 export type ElementsType =
   | 'TextField'
@@ -60,8 +62,8 @@ export const FormElements: FormElementsType = {
   TitleField: TitleFieldFormElement,
   SubTitleField: SubTitleFieldElement,
   ParagraphField: ParagraphFieldFormElement,
-  //SeparatorField: SeparatorFieldFormElement,
-  // SpacerField: SpacerFieldFormElement,
+  SeparatorField: SeparatorFieldFormElement,
+  SpacerField: SpacerFieldFormElement,
   // NumberField: NumberFieldFormElement,
   // TextAreaField: TextAreaFormElement,
   // DateField: DateFieldFormElement,

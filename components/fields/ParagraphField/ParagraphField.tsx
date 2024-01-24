@@ -6,10 +6,10 @@ import { z } from 'zod';
 // Style
 // Types
 import { ElementsType, FormElement, FormElementInstance } from '@/types/FormElements';
-import { MdTextFields } from 'react-icons/md';
 import DesignerParagraphField from '@/components/fields/ParagraphField/DesignerComponent';
 import FormParagraphField from '@/components/fields/ParagraphField/FormComponent';
 import PropertiesParagraphField from '@/components/fields/ParagraphField/PropertiesComponent';
+import { BsTextParagraph } from 'react-icons/bs';
 
 const type: ElementsType = 'ParagraphField';
 
@@ -35,7 +35,7 @@ export const ParagraphFieldFormElement: FormElement = {
     },
   }),
   designerBtnElement: {
-    icon: MdTextFields,
+    icon: BsTextParagraph,
     label: 'Paragraph field',
   },
   designerComponent: DesignerParagraphField,
