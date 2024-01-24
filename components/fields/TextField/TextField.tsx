@@ -64,14 +64,5 @@ export type CustomInstance = FormElementInstance & {
   extraAttributes: typeof extraAttributes;
 };
 
-// Component
-
-// Style
-
-// Types
-
-interface DesignerComponentProps {
-  elementInstance: FormElementInstance;
-}
 
 

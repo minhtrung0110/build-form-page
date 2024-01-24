@@ -10,7 +10,7 @@ import DesignerSpacerField from '@/components/fields/SpacerField/DesignerSpacerF
 import FormSpacerField from '@/components/fields/SpacerField/FormSpacerField';
 import PropertiesSpacerField from '@/components/fields/SpacerField/PropertiesSpacerField';
 
-const type: ElementsType = 'TextField';
+const type: ElementsType = 'SpacerField';
 
 interface Props {
   // Define your component's props here
