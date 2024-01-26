@@ -20,7 +20,7 @@ const FormParagraphField: React.FC<Props> = (props) => {
 
   const { text } = element.extraAttributes;
   return (
-    <p className='text-muted-foreground'>{text}</p>
+    <p className='text-muted-foreground' dangerouslySetInnerHTML={{ __html: text }}></p>
   );
 };
 
