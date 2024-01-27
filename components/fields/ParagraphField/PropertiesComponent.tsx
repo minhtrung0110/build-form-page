@@ -8,7 +8,7 @@ import useDesigner from '@/hooks/useDesigner';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { ParagraphFieldInstance, propertiesSchema } from '@/components/fields/ParagraphField/ParagraphField';
 import 'react-quill/dist/quill.snow.css';
-import Editor from '@/components/molecules/TextEditor';
+import TextEditor from '@/components/molecules/TextEditor';
 // Component
 
 // Style
@@ -47,6 +47,7 @@ const PropertiesParagraphField: React.FC<Props> = (props) => {
     });
   }
 
+
   return (
     <Form {...form}>
       <form
@@ -63,7 +64,7 @@ const PropertiesParagraphField: React.FC<Props> = (props) => {
             <FormItem>
               <FormLabel>Text</FormLabel>
               <FormControl>
-                <Editor />
+                <TextEditor {...field} />
                 {/*<ReactQuill theme='snow' {...field}*/}
                 {/*            onKeyDown={(e) => {*/}
                 {/*              if (e.key === 'Enter') e.currentTarget.blur();*/}

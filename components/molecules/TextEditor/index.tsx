@@ -1,25 +1,42 @@
-import EditorToolbar, { formats, modules } from '@/components/molecules/TextEditor/EditorToolbar';
 import ReactQuill from 'react-quill';
-import React from 'react';
+import React, { useRef } from 'react';
+import EditorToolbar, { formats, modules } from '@/components/molecules/TextEditor/Toolbar';
+import { TextEditorWrapper } from '@/components/molecules/TextEditor/styled';
 
-export const Editor = () => {
-  const [state, setState] = React.useState({ value: null });
-  const handleChange = (value: any) => {
-    setState({ value });
-  };
+interface TextEditorProps {
+  value: string;
+  theme?: string;
+  onChange: () => void;
+  onBlur: () => void;
+  ref: React.RefCallback<any>;
+  placeholder?: string;
+}
+
+export const TextEditor: React.FC<TextEditorProps> = props => {
+  const { value, onChange, onBlur, ref, theme, placeholder } = props;
+  const quillRef = useRef<ReactQuill>(null);
+
   return (
-    <div className="text-editor">
-      <EditorToolbar />
+    <TextEditorWrapper>
+      <EditorToolbar quillRef={quillRef} />
       <ReactQuill
-        theme="snow"
-        value={state.value || ''}
-        onChange={handleChange}
-        placeholder={'Write something awesome...'}
+        theme={theme}
+        value={value || ''}
+        onChange={onChange}
+        ref={quillRef}
+        onBlur={onBlur}
+        placeholder={placeholder}
         modules={modules}
         formats={formats}
       />
-    </div>
+    </TextEditorWrapper>
   );
 };
 
-export default Editor;
+export default TextEditor;
+TextEditor.defaultProps = {
+  theme: 'snow',
+  placeholder: 'Write something awesome...',
+};
+
+
