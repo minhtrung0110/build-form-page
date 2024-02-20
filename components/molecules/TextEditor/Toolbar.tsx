@@ -1,5 +1,7 @@
 import React from 'react';
 import { Quill } from 'react-quill';
+import { Undo } from '@/components/molecules/TextEditor/components/atoms/Undo';
+import { Redo } from '@/components/molecules/TextEditor/components/atoms/Redo';
 
 // Custom Undo button icon component for Quill editor. You can import it directly
 // from 'quill/assets/icons/undo.svg' but I found that a number of loaders do not
@@ -40,12 +42,12 @@ Quill.register(Font, true);
 export const modules = {
   toolbar: {
     container: '#toolbar',
-    // handlers: {
-    //   undo: () => {
-    //     this.quill.history.undo();
-    //   },
-    //   redo: redoChange,
-    // },
+    handlers: {
+      undo: () => {
+        this.quill.history.undo();
+      },
+      redo: redoChange,
+    },
   },
   history: {
     delay: 500,
@@ -83,7 +85,17 @@ interface QuillToolBar {
 // Quill Toolbar component
 export const QuillToolbar: React.FC<QuillToolBar> = props => {
   const { quillRef } = props;
-  console.log('Check ref:', quillRef);
+  const myUndo = () => {
+    let myEditor = quillRef.current.getEditor();
+    console.log('Check ref:', myEditor);
+    return myEditor.history.undo();
+  };
+  const myRedo = () => {
+    let myEditor = quillRef.current.getEditor();
+    console.log('Check ref:', myEditor);
+    return myEditor.history.redo();
+  };
+
   return (
     <div id="toolbar">
       <span className="ql-formats">
@@ -142,10 +154,10 @@ export const QuillToolbar: React.FC<QuillToolBar> = props => {
       </span>
       <span className="ql-formats">
         <button className="ql-undo">
-          <CustomUndo />
+          <Undo key={12} disabled={!quillRef?.current?.length} onClick={myUndo} />
         </button>
         <button className="ql-redo">
-          <CustomRedo />
+          <Redo key={182} disabled={!quillRef?.current?.length} onClick={myRedo} />
         </button>
       </span>
     </div>
