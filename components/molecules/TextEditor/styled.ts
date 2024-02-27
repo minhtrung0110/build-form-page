@@ -20,3 +20,37 @@ export const TextEditorWrapper = styled.div`
     }
   }
 `;
+
+interface FontStyleWrapperProps {
+  width?: number;
+}
+
+export const FontWrapper = styled.select<FontStyleWrapperProps>`
+  margin-bottom: 2px;
+  width: ${props => props.width}px !important;
+
+  .ql-picker-label {
+    font-weight: bold;
+    border-radius: 2px;
+    width: ${props => props.width}px !important;
+    height: 28px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    &:hover {
+      border: 1px solid ${THEME.token.bsFocusInput};
+      color: ${THEME.token.bsFocusInput} !important;
+    }
+  }
+`;
+
+interface QuillFormatWrapperProps {
+  justifyContent?: 'string';
+}
+
+export const QuillFormatWrapper = styled.span<QuillFormatWrapperProps>`
+  margin: 4px 0;
+  display: flex !important;
+  justify-content: ${props => props?.justifyContent || 'space-between'};
+`;

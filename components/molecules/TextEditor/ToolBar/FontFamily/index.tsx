@@ -53,9 +53,9 @@ export const FontFamily: React.FC<FontFamilyProps> = props => {
 
 
   return (
-    <Select onValueChange={onChange}>
+    <Select>
       <SelectTrigger
-        className='!w-28 !h-6 !flex !justify-center !items-center  !border-solid !border !rounded-sm !border-gray-200'>
+        className='!w-28 !h-6 !flex !justify-center !items-center ql-font !border-solid !border !rounded-sm !border-gray-200'>
         <SelectValue placeholder='Fonts' />
       </SelectTrigger>
       <SelectContent>

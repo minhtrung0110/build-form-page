@@ -1,0 +1,120 @@
+/*----------------FONT_FAMILY---------------------*/
+.ql-font-arial {
+    font-family: 'Arial', sans-serif !important;
+}
+
+.ql-font-comic-sans {
+    font-family: 'Comic Sans MS', cursive, sans-serif !important;
+}
+
+.ql-font-courier-new {
+    font-family: 'Courier New', monospace !important;
+}
+
+.ql-font-georgia {
+    font-family: 'Georgia', serif !important;
+}
+
+.ql-font-helvetica {
+    font-family: 'Helvetica', sans-serif !important;
+}
+
+.ql-font-lucida {
+    font-family: 'Lucida Console', Monaco, monospace !important;
+}
+
+.ql-font-times-new-roman {
+    font-family: 'Times New Roman', serif !important;
+}
+
+.ql-font-verdana {
+    font-family: 'Verdana', sans-serif !important;
+}
+
+.ql-font-roboto {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.ql-font-calibri {
+    font-family: 'Calibri', sans-serif !important;
+}
+
+.ql-font-impact {
+    font-family: 'Impact', sans-serif !important;
+}
+
+.ql-font-palatino {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+.ql-font-tahoma {
+    font-family: 'Tahoma', Geneva, sans-serif !important;
+}
+
+.ql-font-garamond {
+    font-family: 'Garamond', serif !important;
+}
+
+.ql-font-bookman {
+    font-family: 'Bookman Old Style', serif !important;
+}
+
+.ql-font-cursive {
+    font-family: 'cursive', sans-serif !important;
+}
+
+.ql-font-fantasy {
+    font-family: 'fantasy', sans-serif !important;
+}
+
+.ql-font-monospace {
+    font-family: 'monospace', sans-serif !important;
+}
+
+.ql-font-serif {
+    font-family: 'serif' !important;
+}
+
+.ql-font-sans-serif {
+    font-family: 'sans-serif' !important;
+}
+
+/*----------------FONT_SIZE-----------------------------*/
+
+.ql-size-14px {
+    font-size: 14px !important;
+}
+
+.ql-size-16px {
+    font-size: 16px !important;
+}
+
+.ql-size-18px {
+    font-size: 18px !important;
+}
+
+.ql-size-20px {
+    font-size: 20px !important;
+}
+
+.ql-size-24px {
+    font-size: 24px !important;
+}
+
+.ql-size-28px {
+    font-size: 28px !important;
+}
+
+.ql-size-30px {
+    font-size: 30px !important;
+}
+
+.ql-size-32px {
+    font-size: 32px !important;
+}
+
+/********************************CONFIG*************************************/
+
+.ql-format > button:hover {
+    color: #3ca9d5 !important;
+}
