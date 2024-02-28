@@ -1,5 +1,5 @@
 // Libraries
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { UserButton } from '@clerk/nextjs';
 
 // Component
@@ -10,12 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher';
 // Types
 
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<Props> = (props) => {
-  const { children } = props;
+function Layout({ children }: { children: ReactNode }) {
   return (
     <div className='flex flex-col min-h-screen min-w-full bg-background max-h-screen'>
       <nav className='flex justify-between items-center border-b border-border h-[60px] px-4 py-2'>
@@ -28,6 +23,6 @@ const Layout: React.FC<Props> = (props) => {
       <main className='flex w-full flex-grow'>{children}</main>
     </div>
   );
-};
+}
 
 export default Layout;
