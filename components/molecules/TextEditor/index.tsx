@@ -2,7 +2,6 @@ import ReactQuill from 'react-quill';
 import React, { useRef } from 'react';
 import { TextEditorWrapper } from '@/components/molecules/TextEditor/styled';
 import { RQ_FORMATS } from '@/components/molecules/TextEditor/config';
-import { handleSelectAll } from '@/components/molecules/TextEditor/ToolBar/SelectAll';
 import ToolbarQuill from '@/components/molecules/TextEditor/ToolbarQuill';
 
 interface TextEditorProps {
@@ -32,9 +31,6 @@ export const TextEditor: React.FC<TextEditorProps> = props => {
         modules={{
           toolbar: {
             container: `#bfp-rq-toolbar`,
-            handlers: {
-              'select-all': handleSelectAll,
-            },
           },
         }}
       />
