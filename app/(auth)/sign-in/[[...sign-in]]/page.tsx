@@ -1,6 +1,6 @@
 // Libraries
 import React from 'react';
-import {SignedIn} from "@clerk/nextjs";
+import { SignIn } from '@clerk/nextjs';
 
 // Component
 
@@ -10,15 +10,15 @@ import {SignedIn} from "@clerk/nextjs";
 
 
 interface Props {
-    // Define your component's props here
+  // Define your component's props here
 }
 
 const SignInPage: React.FC<Props> = (props) => {
-    return (
-        <div>
-            <SignedIn/>
-        </div>
-    );
-}
+  return (
+    <div>
+      <SignIn />
+    </div>
+  );
+};
 
 export default SignInPage;

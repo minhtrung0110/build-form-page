@@ -7,8 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import useDesigner from '@/hooks/useDesigner';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { ParagraphFieldInstance, propertiesSchema } from '@/components/fields/ParagraphField/ParagraphField';
-import { Textarea } from '@/components/ui/textarea';
-
+import 'react-quill/dist/quill.snow.css';
+import TextEditor from '@/components/molecules/TextEditor';
 // Component
 
 // Style
@@ -47,6 +47,7 @@ const PropertiesParagraphField: React.FC<Props> = (props) => {
     });
   }
 
+
   return (
     <Form {...form}>
       <form
@@ -63,13 +64,19 @@ const PropertiesParagraphField: React.FC<Props> = (props) => {
             <FormItem>
               <FormLabel>Text</FormLabel>
               <FormControl>
-                <Textarea
-                  rows={5}
-                  {...field}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') e.currentTarget.blur();
-                  }}
-                />
+                <TextEditor {...field} />
+                {/*<ReactQuill theme='snow' {...field}*/}
+                {/*            onKeyDown={(e) => {*/}
+                {/*              if (e.key === 'Enter') e.currentTarget.blur();*/}
+                {/*            }}*/}
+                {/*/>*/}
+                {/*<Textarea*/}
+                {/*  rows={5}*/}
+
+                {/*  onKeyDown={(e) => {*/}
+                {/*    if (e.key === 'Enter') e.currentTarget.blur();*/}
+                {/*  }}*/}
+                {/*/>*/}
               </FormControl>
               <FormMessage />
             </FormItem>

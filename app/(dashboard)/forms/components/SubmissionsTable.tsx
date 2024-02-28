@@ -4,6 +4,9 @@ import { GetFormWithSubmissions } from '@/actions/form';
 import { ElementsType, FormElementInstance } from '@/types/FormElements';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { formatDistance } from 'date-fns';
+import { Badge } from '@/components/ui/badge';
+import { format } from 'util';
+import { Checkbox } from '@/components/ui/checkbox';
 
 // Component
 
@@ -38,11 +41,11 @@ const SubmissionsTable: React.FC<Props> = async (props) => {
   formElements.forEach((element) => {
     switch (element.type) {
       case 'TextField':
-        //case 'NumberField':
-        // case 'TextAreaField':
-        // case 'DateField':
-        // case 'SelectField':
-        // case 'CheckboxField':
+      case 'NumberField':
+      case 'TextAreaField':
+      case 'DateField':
+      case 'SelectField':
+      case 'CheckboxField':
         columns.push({
           id: element.id,
           label: element.extraAttributes?.label,
@@ -104,17 +107,17 @@ export default SubmissionsTable;
 function RowCell({ type, value }: { type: ElementsType; value: string }) {
   let node: ReactNode = value;
 
-  // switch (type) {
-  //   case 'DateField':
-  //     if (!value) break;
-  //     const date = new Date(value);
-  //     node = <Badge variant={'outline'}>{format(date, 'dd/MM/yyyy')}</Badge>;
-  //     break;
-  //   case 'CheckboxField':
-  //     const checked = value === 'true';
-  //     node = <Checkbox checked={checked} disabled />;
-  //     break;
-  // }
+  switch (type) {
+    case 'DateField':
+      if (!value) break;
+      const date = new Date(value);
+      node = <Badge variant={'outline'}>{format(date, 'dd/MM/yyyy')}</Badge>;
+      break;
+    case 'CheckboxField':
+      const checked = value === 'true';
+      node = <Checkbox checked={checked} disabled />;
+      break;
+  }
 
   return <TableCell>{node}</TableCell>;
 }
