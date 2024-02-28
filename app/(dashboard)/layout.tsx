@@ -11,7 +11,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 
 interface Props {
-  [key: string]: any;
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<Props> = (props) => {
