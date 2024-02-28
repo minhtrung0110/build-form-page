@@ -22,8 +22,9 @@ const type: ElementsType = 'CheckboxField';
 const extraAttributes = {
   label: 'Checkbox field',
   helperText: 'Helper text',
-  required: 'required',
+  required: false,
 };
+
 const propertiesSchema = z.object({
   label: z.string().min(2).max(50),
   helperText: z.string().max(200),
