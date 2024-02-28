@@ -17,7 +17,7 @@ interface TextEditorProps {
 export const TextEditor: React.FC<TextEditorProps> = props => {
   const { value, onChange, onBlur, ref, theme, placeholder } = props;
   const quillRef = useRef<ReactQuill>(null);
-
+  console.log('Value: ', value);
   return (
     <TextEditorWrapper>
       <ToolbarQuill quillRef={quillRef} />
