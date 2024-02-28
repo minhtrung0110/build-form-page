@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { FormElementInstance } from '@/types/FormElements';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { propertiesSchema } from '@/components/fields/TextField/TextField';
 import { zodResolver } from '@hookform/resolvers/zod';
 import useDesigner from '@/hooks/useDesigner';
 import {
@@ -17,7 +16,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
-import { CustomInstanceCheckboxField } from '@/components/fields/CheckboxField/index';
+import {
+  CustomInstanceCheckboxField,
+  propertiesSchema,
+} from '@/components/fields/CheckboxField/index';
 
 // Component
 
@@ -51,6 +53,7 @@ const PropertiesComponent: React.FC<Props> = (props) => {
 
   function applyChanges(values: propertiesFormSchemaType) {
     const { label, helperText, required } = values;
+
     updateElement(element.id, {
       ...element,
       extraAttributes: {

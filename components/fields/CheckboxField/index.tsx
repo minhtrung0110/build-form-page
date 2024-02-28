@@ -25,7 +25,7 @@ const extraAttributes = {
   required: false,
 };
 
-const propertiesSchema = z.object({
+export const propertiesSchema = z.object({
   label: z.string().min(2).max(50),
   helperText: z.string().max(200),
   required: z.boolean().default(false),
