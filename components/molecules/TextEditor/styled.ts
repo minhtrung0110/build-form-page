@@ -46,7 +46,15 @@ export const FontWrapper = styled.select<FontStyleWrapperProps>`
 `;
 
 interface QuillFormatWrapperProps {
-  justifyContent?: 'string';
+  justifyContent?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'space-evenly'
+    | 'left'
+    | 'right';
 }
 
 export const QuillFormatWrapper = styled.span<QuillFormatWrapperProps>`
